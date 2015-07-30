@@ -12,4 +12,6 @@ public class Meter extends BaseLengthInCM {
     public double getValue() {
         return (super.getValue()/100.0);
     }
+
+
 }

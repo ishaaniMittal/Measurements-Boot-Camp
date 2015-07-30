@@ -7,6 +7,10 @@ public class Inch extends BaseLengthInCM {
         super(value*2.54);
     }
 
+    public Inch(){
+
+    }
+
     @Override
     public double getValue() {
         return (super.getValue()/2.54);

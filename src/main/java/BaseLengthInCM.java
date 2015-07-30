@@ -5,6 +5,12 @@ public class BaseLengthInCM {
 
     private double value;
 
+    final static double CONVERT_TO_INCH = 2.54;
+
+    public BaseLengthInCM(){
+
+    }
+
     public BaseLengthInCM(double value) {
         this.value = value;
     }
@@ -25,4 +31,9 @@ public class BaseLengthInCM {
         long temp = Double.doubleToLongBits(value);
         return (int) (temp ^ (temp >>> 32));
     }
+
+    public Inch convertToInch(){
+        return new Inch(value/CONVERT_TO_INCH);
+    }
+
 }

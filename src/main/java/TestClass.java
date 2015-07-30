@@ -63,4 +63,25 @@ public class TestClass {
         assertFalse(yard.equals(feet));
     }
 
+    @Test
+    public void testToCheckConversionFromCentimeterToInch(){
+        BaseLengthInCM centimeter = new Centimeter(2.54);
+        BaseLengthInCM inch = centimeter.convertToInch();
+        assertTrue(inch.equals(new Inch(1)));
+    }
+
+    @Test
+    public void testToCheckConversionFromMeterToInchReturnsInch(){
+        BaseLengthInCM meter = new Meter(2.54);
+        BaseLengthInCM inch = meter.convertToInch();
+        assertTrue(inch.equals(new Inch(100)));
+    }
+
+    @Test
+    public void test(){
+        BaseLengthInCM inch = new Inch(1);
+        BaseLengthInCM inch2 = inch.convertToInch();
+        assertTrue(inch.equals(inch2));
+    }
+
 }
