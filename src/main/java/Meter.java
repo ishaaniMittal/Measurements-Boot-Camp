@@ -13,5 +13,11 @@ public class Meter extends BaseLengthInCM {
         return (super.getValue()/100.0);
     }
 
+    @Override
+    public BaseLengthInCM add(BaseLengthInCM length1) {
+        return new BaseLengthInCM(this.getValue()+length1.getValue());
+
+    }
+
 
 }

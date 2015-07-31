@@ -1,7 +1,7 @@
 /**
  * Created by IShAani on 29-07-2015.
  */
-public class BaseLengthInCM {
+public  class BaseLengthInCM {
 
     private double value;
 
@@ -36,4 +36,14 @@ public class BaseLengthInCM {
         return new Inch(value/CONVERT_TO_INCH);
     }
 
+    public  BaseLengthInCM add(BaseLengthInCM length1){
+        return new BaseLengthInCM() ;
+    }
+
+    @Override
+    public String toString() {
+        return "BaseLengthInCM{" +
+                "value=" + value +
+                '}';
+    }
 }

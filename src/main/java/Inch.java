@@ -15,4 +15,10 @@ public class Inch extends BaseLengthInCM {
     public double getValue() {
         return (super.getValue()/2.54);
     }
+
+    @Override
+    public BaseLengthInCM add(BaseLengthInCM length1) {
+        return new BaseLengthInCM(this.getValue()+length1.convertToInch().getValue());
+
+    }
 }

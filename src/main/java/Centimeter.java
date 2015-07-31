@@ -13,6 +13,12 @@ public class Centimeter extends BaseLengthInCM {
         return super.getValue();
     }
 
+    @Override
+    public BaseLengthInCM add(BaseLengthInCM length1) {
+        return new BaseLengthInCM(this.getValue()+length1.getValue());
+
+    }
+
 
    /* @Override
     public Inch convertFromCmToInch(){

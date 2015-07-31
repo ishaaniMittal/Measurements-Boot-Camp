@@ -11,4 +11,9 @@ public class Feet extends BaseLengthInCM{
     public double getValue() {
         return (super.getValue()/12*2.54);
     }
+
+    @Override
+    public BaseLengthInCM add(BaseLengthInCM length1) {
+        return new BaseLengthInCM(this.getValue()+length1.getValue());
+    }
 }

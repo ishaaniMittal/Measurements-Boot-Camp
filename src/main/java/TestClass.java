@@ -84,4 +84,11 @@ public class TestClass {
         assertTrue(inch.equals(inch2));
     }
 
+    @Test
+    public void addition(){
+        BaseLengthInCM inch = new Inch(3);
+        BaseLengthInCM inch2 = new Centimeter(2.54);
+        System.out.println(inch.add(inch2));
+    }
+
 }
